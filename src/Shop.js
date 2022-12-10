@@ -58,9 +58,9 @@ export default function Shop() {
   return (
     <>
       {items.length === 0 ? (
-        <h2>Товары отсутствуют</h2>
+        <h2 className="text-2xl font-bold">Товары отсутствуют</h2>
       ) : (
-        <h2>{items.length} товаров</h2>
+        <h2 className="ml-2.5 text-xl italic">{items.length} товаров</h2>
       )}
       <AddItem
         name={name}

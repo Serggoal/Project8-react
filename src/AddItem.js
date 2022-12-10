@@ -11,7 +11,7 @@ export default function AddItem(props) {
           onChange={props.onNameChange}
           id="item-name"
           placeholder="Название товара"
-          className="textfield"
+          className="m-2.5 text-base px-2 py-2 rounded border-solid border border-gray-300"    /*"textfield"*/
         />
       </div>
       <div>
@@ -22,12 +22,15 @@ export default function AddItem(props) {
           onChange={props.onDescChange}
           id="item-description"
           placeholder="Описание товара"
-          className="textfield"
+          className="m-2.5 text-base px-2 py-2 rounded border-solid border border-gray-300"
         />
       </div>
       <div className="form-footer">
-        <div className="validation">{props.valid}</div>
-        <input type="submit" className="btn btn-basic" value="Добавить" />
+        <div className="validation text-red-400">{props.valid}</div>
+        <input type="submit" className="btn btn-basic
+        ml-2.5 bg-secondary border-0 px-4 py-2 min-w-150 text-base rounded cursor-pointer transition-opacity ease-in-out shadow-333xl hover:opacity-80 mx-2.5
+        active:shadow-222xl active:translate-y-px disabled:opacity-40" 
+        value="Добавить" />
       </div>
     </form>
   );
