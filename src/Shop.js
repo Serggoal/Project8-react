@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemsList from "./ItemsList";
 import AddItem from "./AddItem";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Shop() {
   const [items, setItems] = useState(() => {
@@ -33,7 +34,8 @@ export default function Shop() {
     setItems([
       ...items,
       {
-        id: items.length + 1,
+      /*  id: items.length + 1,*/
+        id: uuidv4(),
         name: name,
         desc: desc
       }
@@ -60,7 +62,7 @@ export default function Shop() {
       {items.length === 0 ? (
         <h2 className="text-2xl font-bold">Товары отсутствуют</h2>
       ) : (
-        <h2 className="ml-2.5 text-xl italic">{items.length} товаров</h2>
+        <h2 className="ml-2.5 text-xl italic">{items.length} товаров1</h2>
       )}
       <AddItem
         name={name}
